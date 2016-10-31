@@ -35,11 +35,11 @@ public class RequestHelper implements ServerStamp {
 
     private final Handler HANDLER = new Handler();
 
-    private final boolean isDebug = InitialHelper.getInstance().isDebug();
-    private final boolean isEncrypt = InitialHelper.getInstance().isEncrypt();
+    private final boolean isDebug = InitialHelper.isDebug();
+    private final boolean isEncrypt = InitialHelper.isEncrypt();
 
-    private final int TIME_MIN = InitialHelper.getInstance().getTimeMine();
-    private final int TIME_OUT = InitialHelper.getInstance().getTimeOut();
+    private final int TIME_MIN = InitialHelper.getTimeMine();
+    private final int TIME_OUT = InitialHelper.getTimeOut();
 
     private String fixedMethod = null;
 
@@ -62,7 +62,7 @@ public class RequestHelper implements ServerStamp {
         }).build();
 
         //初始化Retrofit，拼接http请求字符串主干，设置OkHttp，以及数据转化工具
-        Retrofit retrofit = new Retrofit.Builder().baseUrl(InitialHelper.getInstance().getServiceUrl())
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(InitialHelper.getServiceUrl())
                 .client(client)
                 .addConverterFactory(ConverterFactory.create())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())

@@ -41,6 +41,6 @@ dependencies {
 
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
-    compile 'com.github.SnGuo:Foundation:v.1.0'
+    compile 'com.github.SnGuo:Foundation:v.1.4'
 
 }

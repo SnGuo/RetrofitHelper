@@ -19,7 +19,7 @@ import javax.crypto.spec.IvParameterSpec;
 
 class DESUtil {
 
-    private static final String KEY = InitialHelper.getInstance().getDesKey();//秘钥
+    private static final String KEY = InitialHelper.getDesKey();//秘钥
 
     /**
      * 解密
